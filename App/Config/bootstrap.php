@@ -144,3 +144,6 @@ Log::config(Configure::consume('Log'));
  * Plugin::load('DebugKit'); //Loads a single plugin named DebugKit
  *
  */
+
+Plugin::load('Crud');
+Plugin::load('CrudView');

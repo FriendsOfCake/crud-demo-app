@@ -25,6 +25,8 @@ use Cake\Core\Configure;
 use Cake\Core\Plugin;
 use Cake\Routing\Router;
 
+Router::parseExtensions('json', 'xml');
+
 /**
  * Uncomment the define below to use CakePHP prefix routes.
  *

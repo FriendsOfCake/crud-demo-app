@@ -6,7 +6,9 @@
     "license": "MIT",
     "require": {
         "cakephp/cakephp": "3.0.*-dev",
-        "php": ">=5.4"
+        "php": ">=5.4",
+        "friendsofcake/crud": "dev-cake3",
+	"phpunit/phpunit": "3.7.*"
     },
     "require-dev": {
         "d11wtq/boris": "1.0.*"
