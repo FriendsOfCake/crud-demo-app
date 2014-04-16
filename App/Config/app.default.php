@@ -4,14 +4,12 @@ $config = [
  * Debug Level:
  *
  * Production Mode:
- * 0: No error messages, errors, or warnings shown. Flash messages redirect.
+ * false: No error messages, errors, or warnings shown.
  *
  * Development Mode:
- * 1: Errors and warnings shown, model caches refreshed, flash messages halted.
- * 2: As in 1, but also with full debug messages and SQL output.
- *
+ * true: Errors and warnings shown.
  */
-	'debug' => 2,
+	'debug' => true,
 
 /**
  * Configure basic information about the application.
@@ -27,8 +25,7 @@ $config = [
  *   use CakePHP pretty URLs, remove these .htaccess
  *   files:
  *      /.htaccess
- *      /app/.htaccess
- *      /app/webroot/.htaccess
+ *      /webroot/.htaccess
  *   And uncomment the baseUrl key below.
  * - imageBaseUrl - Web path to the public images directory under webroot.
  * - cssBaseUrl - Web path to the public css directory under webroot.
@@ -70,7 +67,7 @@ $config = [
  * Will append a querystring parameter containing the time the file was modified. This is
  * useful for invalidating browser caches.
  *
- * Set to `true` to apply timestamps when debug > 0. Set to 'force' to always enable
+ * Set to true to apply timestamps when debug is true. Set to 'force' to always enable
  * timestamping regardless of debug value.
  */
 	'Asset' => [
@@ -91,7 +88,7 @@ $config = [
  */
 	'Cache' => [
 		'default' => [
-			'engine' => 'File',
+			'className' => 'File',
 		],
 
 	/**
@@ -114,7 +111,7 @@ $config = [
 			'className' => 'File',
 			'prefix' => 'my_app_cake_model_',
 			'path' => CACHE . 'models/',
-			'serialize' => 'File',
+			'serialize' => true,
 			'duration' => '+10 seconds',
 		],
 	],
@@ -122,13 +119,13 @@ $config = [
 /**
  * Configure the Error and Exception handlers used by your application.
  *
- * By default errors are displayed using Debugger, when debug > 0 and logged by
- * Cake\Log\Log when debug = 0.
+ * By default errors are displayed using Debugger, when debug is true and logged by
+ * Cake\Log\Log when debug is false.
  *
  * In CLI environments exceptions will be printed to stderr with a backtrace.
  * In web environments an HTML page will be displayed for the exception.
- * While debug > 0, framework errors like Missing Controller will be displayed.
- * When debug = 0, framework errors will be coerced into generic HTTP errors.
+ * With debug true, framework errors like Missing Controller will be displayed.
+ * When debug is false, framework errors will be coerced into generic HTTP errors.
  *
  * Options:
  *
@@ -156,7 +153,7 @@ $config = [
  *
  * You can configure email transports and email delivery profiles here.
  *
- * By defining transports separately from delivery profiles you can eaisly re-use transport
+ * By defining transports separately from delivery profiles you can easily re-use transport
  * configuration across multiple profiles.
  *
  * You can specify multiple configurations for production, development and testing.
@@ -170,7 +167,7 @@ $config = [
  *  Debug  - Do not send the email, just return the result
  *
  * You can add custom transports (or override existing transports) by adding the
- * appropriate file to app/Network/Email.  Transports should be named 'YourTransport.php',
+ * appropriate file to App/Network/Email.  Transports should be named 'YourTransport.php',
  * where 'Your' is the name of the transport.
  *
  * ### Configuring delivery profiles
@@ -218,6 +215,7 @@ $config = [
 			'database' => 'my_app',
 			'prefix' => false,
 			'encoding' => 'utf8',
+			'timezone' => 'UTC'
 		],
 
 		/**
@@ -233,6 +231,7 @@ $config = [
 			'database' => 'test_myapp',
 			'prefix' => false,
 			'encoding' => 'utf8',
+			'timezone' => 'UTC'
 		],
 	],
 
@@ -290,7 +289,7 @@ $config = [
  * Make sure the class implements PHP's `SessionHandlerInterface` and se
  * Session.handler to <name>
  *
- * To use database sessions, run the app/Config/Schema/sessions.php schema using
+ * To use database sessions, run the App/Config/Schema/sessions.php schema using
  * the cake shell command: cake schema create Sessions
  */
 	'Session' => [

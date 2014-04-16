@@ -9,7 +9,7 @@
  *
  * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @link          http://cakephp.org CakePHP(tm) Project
- * @since         CakePHP(tm) v 0.10.8.2117
+ * @since         0.10.8
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 namespace App\Config;
@@ -59,6 +59,7 @@ use Cake\Datasource\ConnectionManager;
 use Cake\Error\ErrorHandler;
 use Cake\Log\Log;
 use Cake\Network\Email\Email;
+use Cake\Network\Request;
 use Cake\Utility\Inflector;
 
 /**
@@ -72,20 +73,20 @@ use Cake\Utility\Inflector;
 try {
 	Configure::config('default', new PhpConfig());
 	Configure::load('app.php', 'default', false);
-
-	// Load an environment local configuration file.
-	// You can use this file to provide local overrides to your
-	// shared configuration.
-	// Configure::load('app.local.php', 'default');
 } catch (\Exception $e) {
 	die('Unable to load Config/app.php. Create it by copying Config/app.default.php to Config/app.php.');
 }
 
+// Load an environment local configuration file.
+// You can use this file to provide local overrides to your
+// shared configuration.
+//Configure::load('app_local.php', 'default');
+
 /**
- * Uncomment this line and correct your server timezone to fix
- * any date & time related errors.
+ * Set server timezone to UTC. You can change it to another timezone of your
+ * choice but using UTC makes time calculations / conversions easier.
  */
-	//date_default_timezone_set('UTC');
+date_default_timezone_set('UTC');
 
 /**
  * Configure the mbstring extension to use the correct encoding.
@@ -95,7 +96,7 @@ mb_internal_encoding(Configure::read('App.encoding'));
 /**
  * Register application error and exception handlers.
  */
-if (php_sapi_name() == 'cli') {
+if (php_sapi_name() === 'cli') {
 	(new ConsoleErrorHandler(Configure::consume('Error')))->register();
 } else {
 	(new ErrorHandler(Configure::consume('Error')))->register();
@@ -125,6 +126,18 @@ ConnectionManager::config(Configure::consume('Datasources'));
 Email::configTransport(Configure::consume('EmailTransport'));
 Email::config(Configure::consume('Email'));
 Log::config(Configure::consume('Log'));
+
+/**
+ * Setup detectors for mobile and tablet.
+ */
+Request::addDetector('mobile', function($request) {
+	$detector = new \Detection\MobileDetect();
+	return $detector->isMobile();
+});
+Request::addDetector('tablet', function($request) {
+	$detector = new \Detection\MobileDetect();
+	return $detector->isTablet();
+});
 
 /**
  * Custom Inflector rules, can be set to correctly pluralize or singularize table, model, controller names or whatever other

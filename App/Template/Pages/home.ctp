@@ -9,7 +9,7 @@
  *
  * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @link          http://cakephp.org CakePHP(tm) Project
- * @since         CakePHP(tm) v 0.10.0.1076
+ * @since         0.10.0
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 use Cake\Cache\Cache;
@@ -20,7 +20,7 @@ use Cake\Error;
 use Cake\Utility\Debugger;
 use Cake\Validation\Validation;
 
-if (Configure::read('debug') == 0):
+if (!Configure::read('debug')):
 	throw new Error\NotFoundException();
 endif;
 ?>
@@ -29,7 +29,7 @@ endif;
 	<a href="http://cakephp.org/changelogs/<?= Configure::version(); ?>">Read the changelog</a>
 </p>
 <?php
-if (Configure::read('debug') > 0):
+if (Configure::read('debug')):
 	Debugger::checkSecurityKeys();
 endif;
 ?>
@@ -40,10 +40,10 @@ endif;
 </p>
 <p>
 <?php
-	if (version_compare(PHP_VERSION, '5.4.3', '>=')):
-		echo '<span class="notice success">Your version of PHP is 5.4.3 or higher.</span>';
+	if (version_compare(PHP_VERSION, '5.4.19', '>=')):
+		echo '<span class="notice success">Your version of PHP is 5.4.19 or higher.</span>';
 	else:
-		echo '<span class="notice">Your version of PHP is too low. You need PHP 5.4.3 or higher to use CakePHP.</span>';
+		echo '<span class="notice">Your version of PHP is too low. You need PHP 5.4.19 or higher to use CakePHP.</span>';
 	endif;
 ?>
 </p>
@@ -134,8 +134,8 @@ endif;
 <h3><?php echo 'Editing this Page'; ?></h3>
 <p>
 	To change the content of this page, edit: APP/Template/Pages/home.ctp.<br />
-	To change its layout, edit: APP/Template/Layouts/default.ctp.<br />
-	You can also add some CSS styles for your pages at: APP/webroot/css.
+	To change its layout, edit: APP/Template/Layout/default.ctp.<br />
+	You can also add some CSS styles for your pages at: webroot/css/.
 </p>
 
 <h3>Getting Started</h3>

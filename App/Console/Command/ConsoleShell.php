@@ -9,7 +9,7 @@
  *
  * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @link          http://cakephp.org CakePHP(tm) Project
- * @since         CakePHP(tm) v 3.0
+ * @since         3.0.0
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 namespace App\Console\Command;
@@ -17,6 +17,7 @@ namespace App\Console\Command;
 use Boris\Boris;
 use Cake\Console\ConsoleOptionParser;
 use Cake\Console\Shell;
+use Cake\Log\Log;
 
 /**
  * Simple console wrapper around Boris.
@@ -41,6 +42,12 @@ class ConsoleShell extends Shell {
 			$this->err('');
 			return 1;
 		}
+
+		Log::drop('debug');
+		Log::drop('error');
+		restore_error_handler();
+		restore_exception_handler();
+
 		$boris = new Boris('app > ');
 		$boris->start();
 	}
