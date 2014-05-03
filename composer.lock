@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "cf24dd26d6209160b4662412b8363f6f",
+    "hash": "ce12a547a6503d0b977e9363f6890a74",
     "packages": [
         {
             "name": "cakephp/cakephp",
@@ -217,12 +217,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfCake/crud-view.git",
-                "reference": "d372e41d91351b12e724d6d967aeb119664bb21c"
+                "reference": "f33ec9d045a771c1bea3227820d69c4deca852df"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfCake/crud-view/zipball/d372e41d91351b12e724d6d967aeb119664bb21c",
-                "reference": "d372e41d91351b12e724d6d967aeb119664bb21c",
+                "url": "https://api.github.com/repos/FriendsOfCake/crud-view/zipball/f33ec9d045a771c1bea3227820d69c4deca852df",
+                "reference": "f33ec9d045a771c1bea3227820d69c4deca852df",
                 "shasum": ""
             },
             "require": {
@@ -269,7 +269,7 @@
                 "scaffolding",
                 "update"
             ],
-            "time": "2014-05-03 11:51:36"
+            "time": "2014-05-03 12:10:21"
         },
         {
             "name": "friendsofcake/search",
@@ -277,12 +277,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfCake/search.git",
-                "reference": "a6c83617316f0af14f195742dcf4ca3442d51a35"
+                "reference": "8ed32c6ed887e212ed123b0239de8d298277cbb9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfCake/search/zipball/a6c83617316f0af14f195742dcf4ca3442d51a35",
-                "reference": "a6c83617316f0af14f195742dcf4ca3442d51a35",
+                "url": "https://api.github.com/repos/FriendsOfCake/search/zipball/8ed32c6ed887e212ed123b0239de8d298277cbb9",
+                "reference": "8ed32c6ed887e212ed123b0239de8d298277cbb9",
                 "shasum": ""
             },
             "require": {
@@ -291,7 +291,7 @@
             "require-dev": {
                 "cakephp/app": "dev-master",
                 "cakephp/cakephp": "3.0.x-dev",
-                "jippi/cakephp-test-utilities": "dev-master"
+                "friendsofcake/cakephp-test-utilities": "dev-master"
             },
             "type": "cakephp-plugin",
             "extra": {
@@ -321,7 +321,7 @@
                 "cakephp3",
                 "search"
             ],
-            "time": "2014-05-03 11:42:04"
+            "time": "2014-05-03 12:08:32"
         },
         {
             "name": "mobiledetect/mobiledetectlib",
@@ -940,7 +940,7 @@
         "jippi/cakephp-test-utilities": 20
     },
     "platform": {
-        "php": ">=5.4"
+        "php": ">=5.4.19"
     },
     "platform-dev": [
 
