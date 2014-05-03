@@ -21,22 +21,7 @@ namespace App\Config;
 require __DIR__ . '/paths.php';
 
 // Use composer to load the autoloader.
-if (file_exists(ROOT . '/vendor/autoload.php')) {
-	require ROOT . '/vendor/autoload.php';
-}
-
-// If composer is not used, use CakePHP's classloader to autoload the framework
-// and the application. You will also need setup autoloading for plugins by
-// passing `autoload' => true for `Plugin::loadAll()` or `Plugin::load()`
-//
-// If you are using a custom namespace, you'll need to set it here as well.
-if (!class_exists('Cake\Core\Configure')) {
-	require CAKE . 'Core/ClassLoader.php';
-	$loader = new \Cake\Core\ClassLoader;
-	$loader->register();
-	$loader->addNamespace('Cake', CAKE);
-	$loader->addNamespace('App', APP);
-}
+require ROOT . '/vendor/autoload.php';
 
 /**
  * Bootstrap CakePHP.
@@ -96,10 +81,16 @@ mb_internal_encoding(Configure::read('App.encoding'));
 /**
  * Register application error and exception handlers.
  */
-if (php_sapi_name() === 'cli') {
+$isCli = php_sapi_name() === 'cli';
+if ($isCli) {
 	(new ConsoleErrorHandler(Configure::consume('Error')))->register();
 } else {
 	(new ErrorHandler(Configure::consume('Error')))->register();
+}
+
+// Include the CLI bootstrap overrides.
+if ($isCli) {
+	require __DIR__ . '/bootstrap_cli.php';
 }
 
 /**
