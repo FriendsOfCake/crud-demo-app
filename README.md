@@ -4,10 +4,20 @@ Installation
 Get the source code
 -------------------
 
+Git clone
+^^^^^^^^^
+
 ```
-git clone git@github.com:jippi/demo-app.git
-cd demo-app
+git clone https://github.com/FriendsOfCake/crud-demo-app.git
+cd crud-demo-app
 composer install
+```
+
+composer
+^^^^^^^^
+
+```
+composer create-project -s dev friendsofcake/crud-demo-app
 ```
 
 Setup the database
