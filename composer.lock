@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "ce12a547a6503d0b977e9363f6890a74",
+    "hash": "66d031f2d4c6230ff51e4b5ab77560ab",
     "packages": [
         {
             "name": "cakephp/cakephp",
@@ -873,16 +873,16 @@
             "time": "2014-01-17 12:21:18"
         },
         {
-            "name": "jippi/cakephp-test-utilities",
+            "name": "friendsofcake/cakephp-test-utilities",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/friendsofcake/cakephp-test-utilities.git",
+                "url": "https://github.com/FriendsOfCake/cakephp-test-utilities.git",
                 "reference": "588d6f654123ca9d4062f94cc38ce8a9fa800098"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/friendsofcake/cakephp-test-utilities/zipball/588d6f654123ca9d4062f94cc38ce8a9fa800098",
+                "url": "https://api.github.com/repos/FriendsOfCake/cakephp-test-utilities/zipball/588d6f654123ca9d4062f94cc38ce8a9fa800098",
                 "reference": "588d6f654123ca9d4062f94cc38ce8a9fa800098",
                 "shasum": ""
             },
@@ -909,12 +909,12 @@
                     "role": "Author"
                 },
                 {
-                    "name": "Frank de Graaf",
-                    "role": "Polisher"
-                },
-                {
                     "name": "Andy Dawson",
                     "role": "Author"
+                },
+                {
+                    "name": "Frank de Graaf",
+                    "role": "Polisher"
                 }
             ],
             "description": "Package with support traits to ease unit testing.",
@@ -937,7 +937,7 @@
         "friendsofcake/crud": 20,
         "friendsofcake/crud-view": 20,
         "friendsofcake/search": 20,
-        "jippi/cakephp-test-utilities": 20
+        "friendsofcake/cakephp-test-utilities": 20
     },
     "platform": {
         "php": ">=5.4.19"

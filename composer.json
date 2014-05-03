@@ -16,7 +16,7 @@
     },
     "require-dev": {
         "d11wtq/boris": "1.0.*",
-        "jippi/cakephp-test-utilities": "dev-master"
+        "friendsofcake/cakephp-test-utilities": "dev-master"
     },
     "suggest": {
         "phpunit/phpunit": "Allows automated tests to be run without system-wide install."
