@@ -1,6 +1,6 @@
 {
     "name": "friendsofcake/crud-demo-app",
-    "description": "CakePHP + CRUD demo app",
+    "description": "CakePHP + CRUD + CRUD View + Search demo app",
     "homepage": "http://friendsofcake.org",
     "type": "project",
     "license": "MIT",
