@@ -143,12 +143,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfCake/crud.git",
-                "reference": "91bb674427ef6c114559ddf7b2f4c2fe57a1a917"
+                "reference": "54a7fa399c8e0279cae9d40b79bd6bae2bcf19d3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfCake/crud/zipball/91bb674427ef6c114559ddf7b2f4c2fe57a1a917",
-                "reference": "91bb674427ef6c114559ddf7b2f4c2fe57a1a917",
+                "url": "https://api.github.com/repos/FriendsOfCake/crud/zipball/54a7fa399c8e0279cae9d40b79bd6bae2bcf19d3",
+                "reference": "54a7fa399c8e0279cae9d40b79bd6bae2bcf19d3",
                 "shasum": ""
             },
             "require": {
@@ -157,7 +157,7 @@
             "require-dev": {
                 "cakephp/app": "dev-master",
                 "cakephp/cakephp": "3.0.*-dev",
-                "jippi/cakephp-test-utilities": "dev-master",
+                "friendsofcake/cakephp-test-utilities": "dev-master",
                 "phpunit/phpunit": "3.7.33"
             },
             "type": "cakephp-plugin",
@@ -209,7 +209,7 @@
                 "scaffolding",
                 "update"
             ],
-            "time": "2014-05-03 11:21:25"
+            "time": "2014-05-03 11:51:18"
         },
         {
             "name": "friendsofcake/crud-view",
@@ -217,12 +217,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfCake/crud-view.git",
-                "reference": "b4d2ed0cf6e1702d5392b28921ed2c0680c3592b"
+                "reference": "d372e41d91351b12e724d6d967aeb119664bb21c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfCake/crud-view/zipball/b4d2ed0cf6e1702d5392b28921ed2c0680c3592b",
-                "reference": "b4d2ed0cf6e1702d5392b28921ed2c0680c3592b",
+                "url": "https://api.github.com/repos/FriendsOfCake/crud-view/zipball/d372e41d91351b12e724d6d967aeb119664bb21c",
+                "reference": "d372e41d91351b12e724d6d967aeb119664bb21c",
                 "shasum": ""
             },
             "require": {
@@ -232,7 +232,7 @@
             "require-dev": {
                 "cakephp/app": "dev-master",
                 "cakephp/cakephp": "3.0.*-dev",
-                "jippi/cakephp-test-utilities": "dev-master",
+                "friendsofcake/cakephp-test-utilities": "dev-master",
                 "phpunit/phpunit": "3.7.33"
             },
             "type": "cakephp-plugin",
@@ -269,7 +269,7 @@
                 "scaffolding",
                 "update"
             ],
-            "time": "2014-05-03 11:39:43"
+            "time": "2014-05-03 11:51:36"
         },
         {
             "name": "friendsofcake/search",
