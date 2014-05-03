@@ -18,6 +18,7 @@ composer
 
 ```
 composer create-project -s dev friendsofcake/crud-demo-app
+cd crud-demo-app
 ```
 
 Setup the database
