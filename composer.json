@@ -1,13 +1,12 @@
 {
-    "name": "cakephp/app",
-    "description": "CakePHP skeleton app",
-    "homepage": "http://cakephp.org",
+    "name": "friendsofcake/crud-demo-app",
+    "description": "CakePHP + CRUD demo app",
+    "homepage": "http://friendsofcake.org",
     "type": "project",
     "license": "MIT",
     "require": {
         "php": ">=5.4.19",
         "cakephp/cakephp": "3.0.*-dev",
-        "php": ">=5.4",
         "phpunit/phpunit": "3.7.*",
         "mobiledetect/mobiledetectlib": "2.*",
 
