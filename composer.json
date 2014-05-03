@@ -8,9 +8,12 @@
         "php": ">=5.4.19",
         "cakephp/cakephp": "3.0.*-dev",
         "php": ">=5.4",
+        "phpunit/phpunit": "3.7.*",
+        "mobiledetect/mobiledetectlib": "2.*",
+
         "friendsofcake/crud": "dev-cake3",
-    	"phpunit/phpunit": "3.7.*",
-        "mobiledetect/mobiledetectlib": "2.*"
+        "friendsofcake/crud-view": "dev-master",
+        "friendsofcake/search": "dev-master"
     },
     "require-dev": {
         "d11wtq/boris": "1.0.*",
