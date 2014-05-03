@@ -160,3 +160,4 @@ Request::addDetector('tablet', function($request) {
 
 Plugin::load('Crud');
 Plugin::load('CrudView');
+Plugin::load('Search');
