@@ -43,7 +43,7 @@ class PostsController extends AppController {
 	 * @return \Cake\Network\Response
 	 */
 	public function add() {
-		return (new \Crud\Action\AddAction($this))->handle();
+		return $this->Crud->execute();
 	}
 
 }
