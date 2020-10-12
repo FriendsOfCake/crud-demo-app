@@ -11,6 +11,15 @@
  * @link          https://cakephp.org CakePHP(tm) Project
  * @since         0.10.0
  * @license       https://opensource.org/licenses/mit-license.php MIT License
+ * @var \App\View\AppView $this
  */
-
-require 'webroot' . DIRECTORY_SEPARATOR . 'index.php';
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+    <title><?= $this->fetch('title') ?></title>
+</head>
+<body>
+    <?= $this->fetch('content') ?>
+</body>
+</html>
