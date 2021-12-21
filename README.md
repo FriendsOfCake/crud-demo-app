@@ -13,9 +13,10 @@ cd crud-demo-app
 
 Modify ``config/app_local.php`` in the `Datasources` section to reflect your own database.
 
-Create the database schema `bin/cake migrations migrate`
+Create the database schema `bin/cake migrations migrate`.
+Seed the database `bin/cake migrations seed`.
 
-Seed the database `bin/cake migrations seed`
+You can also import the ``config/schema/db.sql`` file into your database instead of using the migrations.
 
 ## Create a webserver
 
