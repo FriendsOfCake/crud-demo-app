@@ -177,8 +177,8 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
                 <div class="row">
                     <div class="column links">
                         <h3>Demo Controllers</h3>
-                        <a href="/posts">Posts Controller Index</a>
-                        <a href="/comments">Comments Controller Index</a>
+                        <?= $this->Html->link(__('Posts Controller Index'), ['controller' => 'posts', 'action' => 'index']) ?>
+                        <?= $this->Html->link(__('Comments Controller Index'), ['controller' => 'comments', 'action' => 'index']) ?>
                     </div>
                 </div>
                 <hr>
