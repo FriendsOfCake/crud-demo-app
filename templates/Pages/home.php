@@ -176,6 +176,14 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
                 <hr>
                 <div class="row">
                     <div class="column links">
+                        <h3>Demo Controllers</h3>
+                        <a href="/posts">Posts Controller Index</a>
+                        <a href="/comments">Comments Controller Index</a>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="column links">
                         <h3>Getting Started</h3>
                         <a target="_blank" rel="noopener" href="https://book.cakephp.org/4/en/">CakePHP Documentation</a>
                         <a target="_blank" rel="noopener" href="https://book.cakephp.org/4/en/tutorials-and-examples/cms/installation.html">The 20 min CMS Tutorial</a>
