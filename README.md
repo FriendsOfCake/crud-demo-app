@@ -5,7 +5,7 @@
 ### composer
 
 ```
-composer create-project friendsofcake/crud-demo-app
+composer create-project -s dev friendsofcake/crud-demo-app
 cd crud-demo-app
 ```
 
