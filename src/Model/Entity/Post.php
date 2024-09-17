@@ -13,8 +13,8 @@ use Cake\ORM\Entity;
  * @property string $name
  * @property bool $is_active
  * @property string $body
- * @property \Cake\I18n\FrozenTime|null $created
- * @property \Cake\I18n\FrozenTime|null $modified
+ * @property \Cake\I18n\DateTime|null $created
+ * @property \Cake\I18n\DateTime|null $modified
  *
  * @property \App\Model\Entity\Comment[] $comments
  */
@@ -29,7 +29,7 @@ class Post extends Entity
      *
      * @var array
      */
-    protected $_accessible = [
+    protected array $_accessible = [
         'comment_count' => true,
         'name' => true,
         'is_active' => true,

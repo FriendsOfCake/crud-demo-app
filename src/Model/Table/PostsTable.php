@@ -123,7 +123,7 @@ class PostsTable extends Table
      *
      * @param \Cake\ORM\Query $query The existing Query object
      * @param array $args The HTTP GET args
-     * @param \Search\Type\Base $filter The filter class
+     * @param \Search\Model\Filter\Base $filter The filter class
      * @return void
      */
     public function onlyThisId(Query $query, array $args, \Search\Model\Filter\Base $filter)
